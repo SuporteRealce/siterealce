@@ -15,8 +15,7 @@
 
 /* Configurações Globais */
 * { margin: 0px; padding: 0px; }
-html, body { overflow-x: hidden;  }
-/*body { background: var(--preto-principal) !important; }*/
+html, body { overflow-x: hidden; scroll-behavior: smooth; }
 
 .contencao {
 	margin: 0 auto;
@@ -749,14 +748,14 @@ header nav img:hover {
 }
 .content-bloco p {
 	margin: 0px;
-	font-size: 17px;
+	font-size: 19px;
 }
 .content-bloco .bloco-title {
 	color: var(--azul-escuro);
-	font-weight: 700;
-	font-size: 22px;
+	font-weight: 600;
+	font-size: 23px;
 	margin-bottom: 10px;
-	line-height: 26px;
+	/*line-height: 26px;*/
 }
 .bloco01, .bloco02, .bloco03, .bloco04 {
 	width: 400px;
