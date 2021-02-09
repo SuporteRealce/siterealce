@@ -15,7 +15,7 @@
 
 /* Configurações Globais */
 * { margin: 0px; padding: 0px; }
-html, body { overflow-x: hidden; scroll-behavior: smooth; }
+html, body { overflow-x: hidden; /*scroll-behavior: smooth;*/ }
 
 .contencao {
 	margin: 0 auto;
@@ -794,7 +794,7 @@ header nav img:hover {
 .print {
 	background-color: #f4f5fa;
 	width: 100%;
-	padding: 40px 0px;
+	padding: 100px 0px;
 }
 .content-print {
 	display: flex;
@@ -1680,41 +1680,4 @@ header nav img:hover {
 	.img-block {
 		display: none;
 	}
-}
-
-.whatsapp {
-	position: fixed;
-	right: 20px;
-	bottom: 20px;
-	z-index: 99;
-}
-.whatsapp img {
-	width: 100px;
-}
-.whatsapp img:hover, .whatsapp img:focus {
-	animation: jelly .7s;
-}
-
-@keyframes jelly {
-	from {
-		transform: scale(1, 1);
-	}
-	30% {
-		transform: scale(1.25, 0.75);
-	}
-	40% {
-    	transform: scale(0.75, 1.25);
-	}
-  	50% {
-    	transform: scale(1.15, 0.85);
-  	}
-  	65% {
-   	 	transform: scale(.95, 1.05);
-  	}
-  	75% {
-    	transform: scale(1.05, .95);
-  	}
-  	to {
-    	transform: scale(1, 1);
-  	}
 }

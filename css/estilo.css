@@ -309,18 +309,14 @@ html, body {
 	height: 100%;
 	overflow: hidden;
 }
-.bloco-sistema:hover .bloco-sistema-icone:before {
-	animation: abrindo 2.3s infinite;
-}
-.bloco-sistema:hover {
-	cursor: auto;
-}
 .bloco-sistema {
 	position: relative;
 	width: 100%;
 	background-color: white;
 	padding: 20px 20px;
 	border-radius: 5px;
+	transition: .3s;
+	min-height: 260px;
 }
 .bloco-sistema-icone {
 	position: relative;
@@ -372,6 +368,27 @@ html, body {
 	font-size: 16px;
 	font-weight: 500;
 	margin: 0px;
+}
+.bloco-sistema:hover {
+	background-color: var(--azul);
+	transform: translateY(10px);
+	cursor: default;
+}
+.bloco-sistema:hover * {
+	color: white;
+}
+.bloco-sistema:hover .bloco-sistema-icone {
+	background-color: white;
+	opacity: 1;
+}
+.bloco-sistema:hover .bloco-sistema-icone i {
+	color: var(--azul);
+}
+.bloco-sistema:hover .bloco-sistema-icone:before {
+	animation: abrindo 2.3s infinite;
+}
+.bloco-sistema:hover {
+	cursor: auto;
 }
 
 /* solucao */
@@ -522,6 +539,7 @@ footer .conteudo-footer {
 	-webkit-backdrop-filter: blur(10px);
    	backdrop-filter: blur(10px);
    	transition: .3s;
+   	animation: fadeInDown .5s;
 }
 .nav-fixed-responsive {
 	position: fixed;
@@ -804,4 +822,75 @@ footer .conteudo-footer {
 	100% {
 		box-shadow: 0px 0px 0px 0px #b7cde8;
 	}
+}
+
+.swiper-slide-sistema, .swiper-slide-app {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+}
+.slide-sistema, .slide-app {
+	width: 100%;
+	height: 400px;
+	background-color: transparent;
+	border-radius: 15px;
+	background-size: contain;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+.slide-app {
+	height: 500px;
+}
+
+
+.convite {
+	position: fixed;
+	width: auto;
+	right: 80px;
+	bottom: 10px;
+	z-index: 99;
+	transition: .3s;
+	display: none;
+	overflow-x: hidden;
+}
+.convite-ativo {
+	display: block !important;
+	animation: fadeInRight .8s;
+}
+.whatsapp {
+	position: fixed;
+	right: 0px;
+	bottom: 0px;
+	z-index: 99;
+}
+.whatsapp img {
+	width: 100px;
+}
+.whatsapp img:hover, .whatsapp img:focus {
+	animation: jelly .7s infinite;
+}
+
+@keyframes jelly {
+	from {
+		transform: scale(1, 1);
+	}
+	30% {
+		transform: scale(1.25, 0.75);
+	}
+	40% {
+    	transform: scale(0.75, 1.25);
+	}
+  	50% {
+    	transform: scale(1.15, 0.85);
+  	}
+  	65% {
+   	 	transform: scale(.95, 1.05);
+  	}
+  	75% {
+    	transform: scale(1.05, .95);
+  	}
+  	to {
+    	transform: scale(1, 1);
+  	}
 }
